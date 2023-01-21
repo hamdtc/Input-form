@@ -5,6 +5,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="images.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
         <title>input-form</title>
         <link rel="stylesheet" href="style.css">
     </head>
@@ -13,39 +15,48 @@
         <form action="#" method="post"></form>
         <div class="options">
             <label for="text">Text Field*</label><br>
-            <input type="text" placeholder="Input Text">
+            <input class="check" type="text" placeholder="Input Text">
         </div>
         <div class="options">
             <label for="select">Select Field</label><br>
-            <select name="dropdown" id="drop">
+            <select  name="dropdown" id="drop" aria-placeholder="select">
                 <option value="one">one</option>
                 <option value="two">two</option>
             </select>
         </div>
         <div class="options">
             <label for="text">Text Area</label><br>
-            <textarea rows = "0" cols = "50" name = "description" placeholder="Text here" ></textarea>
+            <textarea class="check" rows = "5" cols = "50" name = "description" placeholder="Text here" ></textarea>
         </div>
         <div class="options">
-            <label for="add-ons">Text Field with add-ons*</label><br>
-            <input type="text" placeholder="input text">
-            <input type = "file" name = "fileupload" accept = "image/*" />
-            <input type = "submit" name = "submit" value = "Submit" />
+            <label for="Add-oin">Text Field with Add-ons *</label>
+                <div class="pad1">
+                    <div class="ons-input">
+                        <label for="" id="lebel-left">Label</label>
+                        <input type="text" placeholder="Text input" class="input-1 sepa">
+                        <button type="button">Button</button>
+                    </div>
+                </div>
         </div>
         <div class="options">
-            
-            <input type="search" id="site-search" name="q" placeholder="Search here">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input class="check"  type="search" id="site" name="q" placeholder="Search here">
+        </div>
+        <div class="options decrement">
+             <span class="minus">-</span>
+             <span class="nums">00</span>
+             <span class="plus">+</span>
         </div>
         <div class="options">
-            <button onclick="increment()">+</button>  
-            <h2 id="counting"></h2>
-            <button onclick="decrement()">-</button>  
-        </div>
-        <div class="options">
-            <input type = "checkbox" name = "maths" value = "on"> Maths
-            <input type = "radio" name = "subject" value = "maths"> Maths
-            <input type="checkbox">
-            <span class="slider round">switch</span>
+            <input  type = "checkbox" name = "maths" value = "on"> checkbox <br>
+            <input  type = "radio" name = "subject" value = "maths"> Radio Button <br>
+
+    
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span> 
+                </label>
+                <span>Switches</span>
         </div>
          
     </body>
